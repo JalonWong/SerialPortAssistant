@@ -609,11 +609,9 @@ void CMainWindow::slotRead()
             int nLen = d.size();
             for(int i = 0; i < nLen; i++)
             {
-                if(i)
-                    szOut += " ";
                 char buff[16] = {0};
                 unsigned char c = d.at(i);
-                sprintf(buff, "0x%X", c);
+                sprintf(buff, "0x%X ", c);
                 szOut += buff;
             }
             szText = szOut;
